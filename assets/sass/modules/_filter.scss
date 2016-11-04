@@ -1,0 +1,242 @@
+//---------------------------------------------------------//
+// Filters / Search
+//---------------------------------------------------------// 
+
+.filter-bar {
+	min-height: rem(59);
+	text-align: center;
+	background-color: $brand-primary;
+	@include clearfix();
+	font-size: rem(12);
+	h1, h2, h3, h4, h5, h6 {
+		color: #ffffff;
+	}
+	.search-item-num {
+		margin-top: rem(6);
+		margin-bottom: rem(15);
+	}
+	.btn-filter {
+		margin-left: rem(5);
+		margin-right: rem(5);
+		&:last-child {
+			margin-right: 0;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.valign {
+		height: 100%;
+	}
+	@include breakpoint(sm) {
+		.search-item-num {
+			margin-bottom: rem(6);
+		}
+	}
+	.info {
+		&-list.nav{
+			li {
+				a {
+					&:hover, &:active, &:focus{
+						background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+.search-item-num {
+	font-weight: 500;
+}
+
+.filter {
+	display: block;
+	margin-bottom: rem(5);
+	@include clearfix();
+	color: $gray-dark;
+	font-weight: 500;
+	font-size: rem(12);
+	.view-as {
+		float: right;
+	}
+	a {
+		color: $gray-light;
+		&.active {
+			color: $gray-dark;
+		}
+	}
+	.view {
+		margin-left: rem(3);
+		a {
+			margin-left: rem(6);
+			margin-right: rem(6);
+			&:last-child {
+				margin-right: 0;
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+.filter-item {
+	margin-right: rem(10);
+	display: inline-block;
+}
+
+.filter-left {
+	float: left;
+	margin-bottom: rem(15);
+}
+
+.filter-right {
+	float: right;
+	margin-bottom: rem(15);
+}
+
+.filter-divider {
+	margin-left: rem(6);
+	margin-right: rem(6);
+}
+
+
+// Filter TABS
+
+.filter-tabs {
+	@extend .nav;
+	text-align: center;
+	font-size: 0;
+	padding: 15px 0;
+	li {
+		font-size: rem($font-size-base);
+		display: inline-block;
+		vertical-align: top;
+		margin-left: rem(5);
+		margin-right: rem(5);
+		position: relative;
+		margin-bottom: rem(0);
+		&.active {
+			a {
+				
+			}
+		}
+		a.active {
+			background-color: $brand-success;
+			color: #ffffff;
+		}
+	}
+}
+
+
+
+
+
+.filter-search {
+	transition: width 0.25s $easing, margin-left 0.25s $easing;
+	overflow: hidden;
+	width: rem(90);
+	&.btn {
+		text-align: left;
+	}
+	&.active {
+		background-color: #ffffff;
+		color: inherit;
+		width: rem(168);
+		margin-left: rem(-78) !important;
+		.search-input {
+			border-left: 1px solid #fff;
+			padding-left: rem(5);
+		}
+	}
+	.search-input {
+		background: #ffffff;
+		padding: 0;
+		margin: 0;
+		border: none;
+		position: absolute;
+		left: rem(30);
+		width: rem(130);
+		border-radius: 0;
+		transition: padding-left 0.25s $easing;
+		text-transform: uppercase;
+	}
+	.search-input::-moz-placeholder {
+	  	color: #a2a6a4;
+	  	opacity: 1;
+	}
+	.search-input:-ms-input-placeholder {
+	  	color: #a2a6a4;
+	}
+	.search-input::-webkit-input-placeholder {
+	  	color: #a2a6a4;
+	}
+}
+
+
+.filter-dropdown {
+	margin-top: rem(20);
+	.icon-add {
+		background: url(../images/icons/icon-plus-2.png) 0 0 no-repeat;
+		@include background-retina(12, 12);
+	}
+	.icon-remove {
+		background: url(../images/icons/icon-remove-2.png) 0 0 no-repeat;
+		@include background-retina(11, 11);
+	}
+}
+
+
+
+
+// Bottom Filter
+
+.bottom-filter {
+	background-color: #323a45;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 99;
+	padding: rem(15 0 15 0);
+	.btn {
+		margin-left: rem(7);
+		margin-right: rem(7);
+	}
+	.control {
+		display: inline-block;
+	}
+	.badge {
+		position: relative;
+		top: rem(1);
+	}
+	@include breakpoint(sm) {
+		padding: 0;
+		.valign {
+			height: rem(58);
+		}
+		.filter-left, .filter-right {
+			margin-bottom: 0;
+		}
+	}
+	label,
+	.filter-item {
+		font-size: 12px;
+		font-weight: 500;
+	}
+}
+
+.item-selected {
+	.num {
+		background-color: #7fd1bb;
+	}
+}
+
+.badge {
+	background-color: $brand-success;
+	font-size: rem(11);
+	margin-right: rem(10);
+	padding: rem(2 5);
+}

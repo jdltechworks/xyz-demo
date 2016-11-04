@@ -1,0 +1,140 @@
+//---------------------------------------------------------//
+// Buttons
+//---------------------------------------------------------// 
+// - All Buttons
+//---------------------------------------------------------//
+
+
+button {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+}
+
+.caret {
+	display: inline-block;
+	vertical-align: middle;
+    border-left: $caret-width-base solid transparent;
+    border-right: $caret-width-base solid transparent;
+    border-top: $caret-width-base solid $brand-primary;
+    margin-left: rem(4);
+}
+
+.btn {
+	box-shadow: none !important;
+	transition: background-color 0.25s $easing, color 0.25s $easing, border-color 0.25s $easing;
+	font-weight: 500;
+	font-size: rem(12);
+	padding-top: rem($padding-base-vertical);
+	padding-bottom: rem($padding-base-vertical);
+	position: relative;
+	border: none;
+	.icon {
+		margin-right: rem(6);
+	}
+}
+
+.btn-group {
+	.btn {
+		margin-right: rem(10);
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+.btn-filter {
+	background-color: #ffffff;
+	color: $navbar-default-color;
+	border-radius: rem($btn-border-radius);
+	padding-top: rem($padding-small-vertical) !important;
+	padding-bottom: rem($padding-small-vertical) !important;
+	&:hover, &:focus {
+		background-color: #ffffff;
+		color: $navbar-default-color;
+	}
+	&.btn-primary {
+		background-color: #c1dccf;
+		color: #ffffff;
+		border-color: transparent;
+	}
+}
+
+
+
+.btn-tag {
+	background-color: #e2e0dc;
+	color: #a2a6a4;
+	height: rem(54);
+	&.btn-tag-white {
+		background-color: #ffffff;
+		&:hover, &:focus {
+			background-color: #ffffff;
+		}
+	}
+	&:hover, &:focus {
+		background-color: #e2e0dc;
+		color: #a2a6a4;
+	}
+	span {
+		display: table;
+		width: 100%;
+		text-align: center;
+		height: 100%;
+	}
+	em {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+		font-style: normal;
+	}
+}
+
+
+.btn-rounded {
+	border-radius: rem($btn-border-radius);
+	background-color: #cbcac6;
+	color: #ffffff;
+	padding-top: rem($padding-small-vertical);
+	padding-bottom: rem($padding-small-vertical);
+	.caret {
+		border-top-color: #ffffff;
+	}
+	&:hover {
+		color: #ffffff;
+	}
+}
+
+.btn-light {
+	background-color: #dfe4e3;
+	color: $navbar-default-color;
+	&:hover, &:focus {
+		background-color: #dfe4e3;
+	}
+}
+
+.btn-dark {
+	background-color: #474e58;
+	color: #939795;
+	&:hover, &:focus {
+		background-color: #474e58;
+		color: #939795;
+	}
+}
+
+
+.remove-item {
+	width: rem(16);
+	height: rem(16);
+	line-height: rem(16);
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(#dfe4e3, 0.6);
+	.icon {
+		@include background-retina(7, 7);
+	}
+}

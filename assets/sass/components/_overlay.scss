@@ -1,0 +1,17 @@
+.overlay {
+  width: 100%;
+  position: fixed;
+  background: rgba(24, 38, 48, .9);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  z-index: 999999;
+  &.close {
+    display: none;
+  }
+  &.open {
+    display: block;
+  }
+}

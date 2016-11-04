@@ -1,0 +1,47 @@
+.project-status {
+  position: relative;
+  &-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    ul {
+      background: #fff;
+      border: solid #ddd;
+      border-width: 0 1px 1px 1px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        text-align: left;
+        padding: 5px 0 5px 13px;
+      }
+    }
+  }
+  a {
+    i {
+      margin-top: 1px;
+    }
+    &.active {
+      border-radius: 0;
+      opacity: 1;
+      color: #969998 !important;
+      span {
+        color: #969998 !important;
+      }
+      background: #fff;
+      display: block;
+    }
+  }
+  &-warn {
+    padding-top: 1em;
+    background: #fff;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+    padding-bottom: 1em;
+    h4 {
+      color: #969998 !important;
+      line-height: 1.5;
+    }
+  }
+}

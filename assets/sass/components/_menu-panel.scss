@@ -1,0 +1,126 @@
+//---------------------------------------------------------//
+// Menu / Menu Panel
+//---------------------------------------------------------// 
+
+
+// Menu Toggle
+
+.menu-toggle {
+	float: left;
+	padding: rem(10);
+	z-index: 9999;
+	margin: rem(14 8 0 -10);
+	position: relative;
+	width: rem(39);
+	height: rem(37);
+	.menu-line {
+		width: rem(19);
+		height: rem(3);
+		background-color: $menu-toggle-bg;
+		display: block;
+		position: absolute;
+		top: rem(10);
+		left: rem(10);
+		transition: all 0.25s $easing;
+		&:nth-child(2) {
+			top: rem(17);
+		}
+		&:last-child {
+			top: rem(24);
+		}
+	}
+	@include breakpoint(sm) {
+		margin: rem(14 14 0 -10);
+	}
+}
+
+
+// Menu Panel
+
+.menu-panel {
+	background-color: #182630;
+	position: fixed;
+	width: rem($menu-panel-width);
+	top: 0;
+	left: 0;
+	height: 100%;
+	color: #ffffff;
+	font-size: rem(12);
+	transform: translateX(-100%);
+	transition: transform 0.25s $easing;
+	padding-top: rem($navbar-height);
+	z-index: 10;
+}
+
+.menu-container {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling:touch;
+	width: 100%;
+	height: 100%;
+	padding: rem(20 0);
+}
+
+.menu-content {
+	display: block;
+	margin-bottom: rem(45);
+	h3 {
+		font-size: rem(20);
+		color: #ffffff;
+		font-weight: 500;
+		margin-bottom: rem(15);
+	}
+	.icon-fw {
+		width: rem(55) !important;
+	}
+	.badge {
+		background-color: #ed8d8d;
+		margin-right: 0;
+	}
+}
+
+.menu {
+	text-transform: uppercase;
+	font-weight: 500;
+	border-top: 1px solid rgba(#595856, 0.3);
+	li {
+		border-bottom: 1px solid rgba(#595856, 0.3);
+	}
+	a {
+		display: block;
+		color: #6a7075;
+		padding: rem(9 0 9 55);
+		&:hover, &:focus {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+
+
+// Menu Opens
+
+.menu-open {
+	.menu-panel {
+		transform: none;
+	}
+	.wrapper {
+		transform: translateX(rem($menu-panel-width));
+	}
+	.menu-toggle {
+		.menu-line {
+			&:first-child {
+		        transform: rotate(45deg);
+		        top: rem(17);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:last-child {
+				transform: rotate(-45deg);
+				top: rem(17);
+			}
+		}
+	}
+}

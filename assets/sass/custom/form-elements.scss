@@ -1,0 +1,14 @@
+/* file: form-element.scss 
+ * what: custom styling for all form elements
+ */
+
+
+.iwl-select {
+	.input-form {
+		height: 3.375rem;
+		select {
+    		height: 3em;
+    		margin-top: 0.75em;			
+		}
+	}
+}

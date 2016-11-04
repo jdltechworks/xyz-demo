@@ -1,0 +1,53 @@
+//---------------------------------------------------------//
+// Tables
+//---------------------------------------------------------// 
+
+.table-responsive {
+	min-height: .01%;
+  	@include breakpoint(xs-only) {
+  		width: 100%;
+	    margin-bottom: 15px;
+	    overflow-y: hidden;
+	    -ms-overflow-style: -ms-autohiding-scrollbar;
+  	}
+}
+
+.table {
+	width: 100%;
+  	max-width: 100%;
+  	font-size: rem(12);
+  	-webkit-overflow-scrolling: touch;
+	td, th {
+		vertical-align: middle;
+		padding: rem(10);
+		text-align: left;
+		position: relative;
+	}
+	th {
+		font-size: rem(12);
+		color: $gray-dark;
+	}
+	tbody {
+		tr {
+			border: 1px solid transparent;
+			cursor: pointer;
+			&.selected {
+    border-width: 0 0 10px;
+    border-color: $brand-success $brand-success transparent;
+			}
+		}
+		.table-spacer {
+			background: none;
+			border: none;
+			td {
+				height: rem(5);
+				padding: 0;
+				background: none;
+			}
+		}
+		td {
+			background-color: #ffffff;
+		}
+	}
+}
+

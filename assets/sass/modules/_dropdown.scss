@@ -1,0 +1,61 @@
+//---------------------------------------------------------//
+// Dropdown
+//---------------------------------------------------------// 
+
+
+.dropdown {
+	position: relative;
+	min-width: rem(135);
+	font-weight: 500;
+	.dropdown-btn {
+		width: 100%;
+		height: rem(27);
+		display: block;
+		background-color: #dfe4e3;
+		border-radius: rem(13);
+		padding: rem(0 24 0 10);
+		line-height: rem(27);
+		position: relative;
+		font-size: rem(11);
+		color: #8f9392;
+		transition: border-radius 0.25s $easing;
+		z-index: 2;
+		&:after {
+			content: '';
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 4px solid #8e908f;
+			position: absolute;
+			top: rem(12);
+			right: rem(10);
+		}
+		&.active {
+			border-radius: 0;
+		}
+		.icon {
+			margin-right: rem(6);
+		}
+	}
+	.dropdown-content {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #f9f9f9;
+		padding: rem(7 10);
+		@extend .nav;
+		font-size: rem(11);
+		li {
+			display: block;
+			position: relative;
+			a {
+				padding: 10px 0;
+			}
+		}
+		a {
+			color: $gray-light;
+			display: block;
+		}
+	}
+}
+

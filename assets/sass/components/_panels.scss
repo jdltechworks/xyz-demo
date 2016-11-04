@@ -1,0 +1,18 @@
+//---------------------------------------------------------//
+// Panels
+//---------------------------------------------------------// 
+
+.panel {
+	background-color: $panel-bg;
+	h1, h2, h3, h4, h5, h6 {
+	    color: $gray-dark;
+	}
+	@include clearfix();
+	&.panel-default {
+		background-color: $panel-default-bg;
+	}
+	.panel-body {
+		padding: rem($panel-body-padding);
+	}
+	margin-bottom: 0;
+}

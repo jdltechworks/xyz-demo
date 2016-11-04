@@ -1,0 +1,98 @@
+//---------------------------------------------------------//
+// Slider
+//---------------------------------------------------------// 
+
+
+
+// Project Listing Slider
+
+.project-listing {
+	.swiper-container {
+		overflow: visible;
+	}
+}
+
+
+
+// Item Slider
+
+.item-slider {
+	padding: 0;
+	background-color: #ffffff;
+	display: block;
+	margin-bottom: rem(32);
+	position: relative;
+	overflow: hidden;
+	img {
+		max-width: 100%;
+		margin: 0 auto;
+		display: block;
+	}
+	.swiper-wrapper {
+		margin-bottom: rem(0);
+	}
+	.tools-wrap {
+		overflow: visible;
+		height: auto;
+	}
+	.tool-controls {
+		position: absolute;
+		z-index: 1000;
+		right: 0;
+	}
+	.tool-btns {
+		position: relative;
+		display: inline;
+	}
+	.tool-panel {
+		z-index: 99;
+	}
+	.tool-panel-content {
+		width: rem(200);
+		height: auto;
+	}
+	.tool-panel.active .tool-panel-content {
+		@include box-shadow();
+	}
+}
+
+
+
+
+// Slider Pagination
+
+.swiper-pagination {
+	position: absolute;
+	bottom: 0;
+	//left: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 10;
+	line-height: 1;
+	padding-bottom: rem(15);
+
+	.swiper-pagination-bullet,
+	li
+	 {
+		display: inline-block;
+		vertical-align: middle;
+		width: rem(7);
+		height: rem(7);
+		border-radius: 50%;
+		background-color: #c0c0c0;
+		margin: rem(0 5);
+		cursor: pointer;
+		&:hover, &.swiper-pagination-bullet-active,
+		&.slick-active {
+			background-color: #818181;
+		}
+		button {
+			color: transparent;
+		}
+	}
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+	padding-left: 0;
+	padding-right: 0;
+}

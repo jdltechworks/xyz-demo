@@ -1,0 +1,98 @@
+//---------------------------------------------------------//
+// Thumbnails
+//---------------------------------------------------------// 
+
+
+.thumbnail {
+	padding: rem(0);
+	position: relative;
+	font-size: rem(12);
+	border: none;
+	background-color: transparent;
+	.thumbnail-desc {
+		padding: rem(0 15 $grid-gutter-width);
+		font-weight: 500;
+		width: 100%;
+	}
+	p {
+		line-height: 1.4;
+		span {
+			display: block;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.item-title {
+		color: #424242;
+	}
+	.item-num {
+		color: #95908f;
+	}
+}
+
+
+.project-list.products{
+	.col-sm-4 {
+		.thumbnail {
+			.thumbnail-image {
+				height: 380px;
+					margin: 0;
+					@media only screen and (max-width: 900px) {
+						height: 235px;
+					}
+					@media only screen and (max-width: 800px) {
+						height: 210px;
+					}
+			}
+		}
+	}
+}
+
+.thumbnail-image {
+	position: relative;
+	z-index: 8;
+	margin-bottom: rem(12);
+	background-size: contain !important;
+	img {
+		max-width: 100%;
+		display: block;
+		width: 100%;
+	}
+	@media only screen and (max-width: 767px) {
+		img.add-project {
+			height: 100%;
+		}
+	}
+
+	&.center-img {
+		width: 72px;
+	  	height: 72px;
+	  	background-position: 50% 50%;
+	  	background-size: cover;
+	}
+}
+
+
+
+
+
+// Image LIst
+
+.image-list {
+	@extend .nav;
+	margin-left: rem(-1);
+	margin-right: rem(-1);
+	margin-bottom: rem(-2);
+	@include clearfix();
+	li {
+		float: left;
+		padding-left: rem(1);
+		padding-right: rem(1);
+		margin-bottom: rem(2);
+		width: 33.333333%;
+		background-size: contain !important;
+	}
+}
+
+

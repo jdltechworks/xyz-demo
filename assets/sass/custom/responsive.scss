@@ -1,0 +1,99 @@
+/* file: responsive.scss 
+ * what: styling for responsive theming
+ */
+
+$phone-small: 320px;
+$phone-large: 435px;
+
+@media screen and (max-width: 770px) {
+	.navbar {
+		.navbar-right {
+		    width: 45%;
+		}
+	}
+	.flashmessage {
+		width: 80%;
+	}		
+}	
+
+@media screen and (min-width: 445px) {
+	.flashmessage {
+		.flashmessage-controls {
+			padding: 20px 50px;
+		}
+	}
+}	
+
+@media screen and (max-width: $phone-large) {
+	.navbar {
+		.navbar-brand {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			width: 6rem;
+			background-size: 6rem auto;
+			margin-top: 1.7rem;
+		}
+		.navbar-path {
+			margin-top: 0.72rem;
+		}
+		.navbar-right {
+		    padding-bottom: 0;
+		}
+		.navbar-search {
+			.form-control {
+			    float: left;
+			    width: 90%;
+			}			
+		}
+	}
+	.bottom-filter {
+		// padding: rem(10) 0;
+		.col-label {
+			width: 66.6667%;
+		}
+		.col-btn {
+			width: 33.3333%;
+		}
+		.btn-group-add-del {
+    	border-collapse: separate;
+    	display: table;
+    	table-layout: fixed;
+    	width: 100%;		
+			.btn {
+    		display: table-cell;
+    		float: none;
+    		width: 1%;
+    		margin: 0;
+    		padding: 0;
+			}
+			>.btn:first-child {
+		    margin-right: 2px;
+			}
+		}
+		.btn-filter {
+			span {
+				margin: 0;
+				&:not(.icon) {
+					display: none;
+				}
+			}
+		}
+		.filter-left {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: $phone-small) {
+	.bottom-filter {
+		.col-label {
+			width: 75%;
+		}
+		.col-btn {
+			width: 25%;
+		}
+		.xs-label {
+			font-size: 0.675rem;
+		}		
+	}	
+}	

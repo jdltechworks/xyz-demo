@@ -1,0 +1,232 @@
+//---------------------------------------------------------//
+// Forms
+//---------------------------------------------------------// 
+
+
+.form-control {
+	text-transform: uppercase;
+	font-size: rem(12);
+	border: none;
+	box-shadow: none;
+	height: rem(54);
+	&:hover, &:focus {
+		border: none;
+		box-shadow: none;
+	}
+  &.description {
+    text-transform: none;
+  }
+}
+
+label {
+	font-weight: normal;
+}
+
+textarea.form-control {
+	padding-top: rem(15);
+	text-transform: none;
+}
+
+
+.select-form {
+	position: relative;
+	margin-bottom: rem($form-group-margin-bottom);
+	&:after {
+		content: '';
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 4px solid #8e908f;
+		position: absolute;
+		top: 50%;
+		right: rem(10);
+	}
+	select {
+		width: 100%;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	    text-indent: 0.01px;
+	    text-overflow: '';
+	    background-color: #ffffff;
+	    &:focus {
+	    	color: #323a45;
+	    }
+	    border: none;
+	   	line-height: 1.42857;
+	    padding: rem(7 10 7 10);
+	    cursor: pointer;
+	}
+}
+
+.input-cal {
+	background-repeat: no-repeat;
+	background-image: url(../images/icons/icon-calendar.png);
+	background-size: rem(16 16);
+	background-position: right center;
+	border-right: rem(14) solid transparent;
+	padding-top: rem(10);
+	&:hover, &:focus {
+		border-right: rem(14) solid transparent;
+	}
+}
+
+
+input[type="date"]::before {
+	color: #bcbcbc;
+	content: attr(placeholder);
+}
+input[type="date"] {
+	color: #bcbcbc;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+	color: #000000;
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}
+
+
+
+a.paging-btn {
+  line-height: 2.5;
+}
+
+.paging-btn {
+	background-color: $brand-primary;
+	height: rem(58);
+	display: block;
+	color: #ffffff;
+	font-size: rem(18);
+	text-align: center;
+	&:hover, &:focus {
+		color: #ffffff;
+	}
+	.valign {
+		height: rem(58);
+	}
+}
+
+
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control {
+  background-color: #fff;
+}
+
+.input-with-label {
+	background-color: #ffffff;
+	height: rem(54);
+	padding-left: rem($padding-base-horizontal);
+	padding-right: rem($padding-base-horizontal);
+	line-height: rem(54);
+	label {
+		font-size: rem(12);
+		color: #bcbcbc;
+		float: left;
+		margin-right: rem(7);
+	}
+	.select-form {
+		overflow: hidden;
+		height: rem(50);
+		select {
+			padding-left: 0;
+
+		}
+	}
+  .input-form {
+    overflow: hidden;
+    height: rem(50);
+    position: relative;
+    input {
+      padding-left: 0;
+    }
+    button {
+      position: absolute;
+      top: 0;
+      right: 0
+    }
+  }
+}
+
+
+
+
+
+// 
+
+.radio label, .checkbox label {
+    padding-left: rem(25);
+    margin-bottom: 0;
+}
+
+.radio, .checkbox {
+	margin: 0;
+}
+
+
+// Checkbox and Radio
+
+.control {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  font-size: rem(14);
+  text-transform: none;
+  text-align: left;
+  padding-left: rem(20);
+}
+.control input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+}
+.control-indicator {
+  position: absolute;
+  top: rem(2);
+  left: 0;
+  z-index: 9;
+}
+
+
+/* Focus */
+.control input:focus ~ .control-indicator {
+    
+}
+
+/* Checked state */
+.control input:checked ~ .control-indicator {
+      
+}
+
+/* Active */
+.control input:active ~ .control-indicator {
+    
+}
+
+
+/* Checkbox modifiers */
+.checkbox, .radio {
+    .control-indicator {
+        width: rem(13);
+        height: rem(13);
+        display: block;
+    }
+}
+.checkbox .control-indicator {
+    background: url(../images/icons/icon-checkbox.png) 0 0 no-repeat;
+    background-size: rem(13 26);
+}
+.checkbox input:checked ~ .control-indicator {
+    background-position: rem(0 -13);
+}
+
+
+/* Radio modifiers */
+.radio .control-indicator {
+    background: url(../images/icons/icon-radio.png) 0 0 no-repeat;
+    background-size: rem(18 36);
+}
+.radio input:checked ~ .control-indicator {
+    background-position: rem(0 -18);
+}

@@ -1,0 +1,121 @@
+//---------------------------------------------------------//
+// MIXINS
+//---------------------------------------------------------// 
+// - Custom mixins
+//---------------------------------------------------------//
+
+
+
+// PX TO REM conversion
+//---------------------------------------------------------//
+
+
+@function parseInt($num) {
+  	@return $num / ($num * 0 + 1);
+}
+
+
+@function rem($values){ 
+	$length: length($values);
+    $list: (); 
+
+    @for $i from 1 through $length {
+    	$item: nth($values, $i);
+		$list: append($list, remCalculate($item)); 
+    }
+
+    @return $list;
+}
+
+@function remCalculate($values) {
+
+	
+	@if type-of($values) == "number" {
+		$remValues: parseInt($values) / parseInt($browser-context) * 1rem;
+
+		@if $remValues == 0rem {
+			$remValues: 0;
+		}
+		
+		@return $remValues;
+	}
+
+	@else if $values == "auto" {
+		$values: auto;
+
+		@return $values;
+	}
+
+	@else {
+		@warn 'There is no unit conversion for that specific values';
+	}
+
+
+	
+}
+
+
+
+// Breakpoint (Media Query for Bootstrap)
+//---------------------------------------------------------//
+
+
+@mixin breakpoint($query) {
+	@if $query == "xs-only" {
+		@media (max-width: $screen-xs-max) {
+			@content;
+		}
+	}
+
+	@else if $query == "sm" {
+		@media (min-width: $screen-sm-min) {
+			@content;
+		}
+	}
+	
+	@else if $query == "sm-only" {
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			@content;
+		}
+	}
+
+	@else if $query == "md" {
+		@media (min-width: $screen-md-min) {
+			@content;
+		}
+	}
+
+	@else if $query == "md-only" {
+		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			@content;
+		}
+	}
+
+	@else if $query == "lg" {
+		@media (min-width: $screen-lg-min) {
+			@content;
+		}
+	}
+}
+
+
+
+// Box Shadow
+//---------------------------------------------------------//
+
+@mixin box-shadow() {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+// Background Size (Retina)
+//---------------------------------------------------------//
+
+@mixin background-retina($width, $height) {
+	background-size: rem($width $height);
+	width: rem($width);
+	height: rem($height);
+}

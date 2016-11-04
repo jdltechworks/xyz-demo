@@ -1,0 +1,73 @@
+//---------------------------------------------------------//
+// Sorting
+//---------------------------------------------------------// 
+
+.sorting-content {
+	.select-form {
+		margin-bottom: 0;
+		display: inline-block;
+		&:after {
+			border-top: 4px solid $gray-dark;
+			top: rem(7);
+		}
+		select {
+			background: none;
+			width: auto;
+			padding: 0;
+			margin: 0;
+			padding-right: rem(22);
+		}
+	}
+	.thumbnail-image {
+		width: rem(72);
+		margin-bottom: 0;
+	}
+	.sort-checkbox {
+		position: absolute;
+		left: rem(-17);
+		top: 50%;
+		transform: translateY(-50%);
+		margin-top: rem(-10);
+	}
+
+	.sort-link {
+		option {
+			display: none;
+		}
+		&:after {
+			display: none;
+		}
+		&.active:after {
+			display: block;
+		}
+		&.reverse:after {
+			display: block;
+			border-bottom: 4px solid #484c4b;
+    		border-top: none;
+		}
+	}
+
+	a.sort-link {
+		cursor: pointer;
+		padding-right: 13px;
+		&:after {
+			right: 0;
+		}
+	}
+
+	th {
+		font-weight: 500;
+	}
+
+	.col2 {
+		min-width: 30%;
+	}
+}
+
+.manage-controls {
+	a, button {
+		margin-left: rem(8);
+		margin-right: rem(8);
+	}
+	min-width: 55px;
+}

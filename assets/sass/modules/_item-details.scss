@@ -1,0 +1,106 @@
+//---------------------------------------------------------//
+// Item Details
+//---------------------------------------------------------// 
+
+.back-btn {
+	background: url(../images/icons/icon-arrow-left.png) 50% 50% no-repeat;
+	background-size: rem(8 14);
+	width: rem(31);
+	height: rem(39);
+	float: left;
+	margin-right: rem(5);
+	margin-left: rem(-15);
+	margin-top: rem(13);
+	@include breakpoint(sm) {
+		
+		margin-left: rem(-10);
+		background-size: rem(11 19);
+	}
+}
+
+.close-btn {
+	background: url(../images/icons/icon-close.png) 50% 50% no-repeat;
+	background-size: rem(14 14);
+	width: rem(30);
+	height: rem(30);
+	float: left;
+	margin-right: rem(10);
+	margin-left: rem(-10);
+	margin-top: rem(19);
+	@include breakpoint(sm) {
+		background-size: rem(17 17);
+		width: rem(37);
+		height: rem(37);
+		margin-top: rem(15);
+	}
+}
+
+.navbar {
+	h1 {
+		font-size: rem(14);
+		margin-bottom: 0;
+	}
+	.item-title {
+		width: rem(110);
+		color: #2b2d2c;
+		margin-bottom: 0;
+		overflow: hidden;
+		display: block;
+		line-height: 1;
+		.item-subtitle {
+			font-weight: normal;
+			color: $gray-light;
+		}
+	}
+	@include breakpoint(sm) {
+		h1 {
+			font-size: rem(24);
+		}
+		.item-title {
+			width: auto;
+		}
+		
+	}
+}
+
+
+
+// Added Item
+
+.added-items-content {
+	background: url(../images/marble-bg1.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	padding: rem(22 $grid-gutter-width);
+	@include clearfix();
+	.swiper-slide {
+		width: rem(45) !important;
+	}
+	.thumbnail, .thumbnail-image {
+		margin-bottom: 0;
+	}
+}
+
+.added-items {
+	@extend .nav;
+	li {
+		float: left;
+		width: rem(45);
+		height: rem(45);
+		margin-right: rem(14);
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.go-to-btn {
+	background: url(../images/concrete-bg1.jpg) 50% 50% no-repeat;
+	width: rem(45);
+	height: rem(45);
+	display: block;
+	line-height: rem(45);
+	text-align: center;
+	.icon-next-arrow-white {
+		@include background-retina(24, 19);
+	}
+}

@@ -1,0 +1,31 @@
+//---------------------------------------------------------//
+// HELPERS
+//---------------------------------------------------------// 
+// - Custom 
+//---------------------------------------------------------//
+
+// Vertical Alignment
+.valign {
+	width: 100%;
+	display: table;
+	&.bottom {
+		.valign-content {
+			vertical-align: bottom;
+		}
+	}
+	.valign-content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+// Center Block
+.center-block {
+	float: none;
+	margin: 0 auto;
+}
+
+
+.no-margin {
+	margin: 0 !important;
+}

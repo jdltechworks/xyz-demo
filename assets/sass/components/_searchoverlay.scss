@@ -1,0 +1,30 @@
+.search-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  background: #fff;
+  margin: auto;
+  color: #fff;
+  z-index: 999999;
+  font-size: 14px;
+  margin: auto;
+  height: 100%;
+  opacity: .9;
+  padding: 1.5rem;
+  a {
+    &.search-close {
+      font-size: 20px;
+      color: #ccc;
+    }
+  }
+  .wrap {
+    position: relative;
+  }
+  .result {
+    display: block;
+    color: #afb3b2;
+  }
+}

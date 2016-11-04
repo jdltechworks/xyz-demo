@@ -1,0 +1,127 @@
+//---------------------------------------------------------//
+// Admin
+//---------------------------------------------------------// 
+
+
+// Photo Upload
+
+.photo-upload {
+	background-color: #e7e5e1;
+	padding: rem($grid-gutter-width);
+	padding-top: 0px;
+	&.uploading {
+		pointer-events: none;
+		cursor: no-drop;
+	}
+	.drop-area {
+		border: 1px dashed #bcbcbc;
+		background-color: #f3f2f0;
+		height: rem(114);
+		text-align: center;
+		margin-bottom: rem($grid-gutter-width);
+		label {
+			margin-bottom: 0;
+		}
+		.valign {
+			width: 100%;
+			height: 100%;
+		}
+		label {
+			font-weight: normal;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		input {
+			display: none;
+		}
+	}
+}
+
+.upload-thumbs {
+	@extend .nav;
+	@include clearfix();
+	li {
+		float: left;
+		position: relative;
+		width: rem(90);
+		margin-right: rem($grid-gutter-width);
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.generated-num-content {
+	background-color: #ffffff;
+	height: rem(54);
+	line-height: rem(54);
+	padding-left: rem($padding-base-horizontal);
+	padding-right: rem($padding-base-horizontal);
+	color: $input-color;
+	position: relative;
+	.lock-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: 1;
+		right: $padding-base-horizontal;
+	}
+}
+
+
+
+
+// Classification
+
+.category-list {
+	@extend .nav;
+	font-size: rem(12);
+	.manage-controls {
+		float: right;
+	}
+	li {
+		background-color: #ffffff;
+		margin-bottom: rem(5);
+		padding: rem(18 14);
+		@include clearfix();
+		cursor: pointer;
+		position: relative;
+		left: 0;
+		top: 0;
+		text-transform: uppercase;
+		overflow: hidden;
+		height: 53px;
+		transition: all 0.25s $easing;
+		form {
+			visibility: hidden;
+		}
+		&.form-open {
+			height: 145px;
+			form {
+				visibility: visible;
+				transition: all 0s $easing 0.25s;
+			}
+			
+		}
+		&.taphover {
+			.taphover-action {			
+				margin-right: -63px;
+				transition: all 0.25s $easing;
+				&.hovered {
+					margin-right: 0px;
+				}
+			}
+			&:hover {
+				.taphover-action {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	.cat {
+		min-width: rem(130);
+	}
+	.category-data {
+		float: left;
+	}
+}

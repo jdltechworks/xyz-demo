@@ -1,0 +1,106 @@
+.flashmessage {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 90%;
+  padding: 0;
+  top: 0;
+  background: #b5d8c9;
+  margin: auto;
+  color: #fff;
+  top: 17%;
+  z-index: 100;
+  font-size: 14px;
+  margin: auto;
+
+  @include breakpoint(sm) {
+    width: 35%;
+  }
+
+  h2,
+  h3 {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  .close-wrap {
+    padding: 5px 10px;
+  }
+  .check {
+    opacity: .8;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px dotted #f5f5f5;
+    padding: 9px;
+    margin-bottom: 1.5em;
+    span {
+      font-size: 26px;
+    }
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  &.error {
+    background: #A94442;
+  }
+  .btn-list {
+    a {
+      margin-left: 5px;
+      margin-right: 5px;
+      &:first-child {
+        color: #99B6A9;
+        background-color: #FFFFFF;
+      }
+      &:last-child {
+        color: #7C8F87;
+        background-color: #ACCDBF;
+      }
+    }
+  }
+}
+
+.flashmessage span,
+.flashmessage strong {
+  line-height: 1;
+  font-size: 14px;
+  .close-wrap {
+    padding: 5px 10px;
+  }
+}
+
+.flashmessage a.close {
+    line-height: .8;
+    font-size: 25px;
+    opacity: .5;
+
+    .glyphicon {
+      color: #ffffff;
+      text-shadow: none;
+    }
+}
+
+.flashmessage-controls {
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    @media only screen and (max-width: 420px) {
+      padding: 7.5% 2% 0;
+    }
+
+  ul {
+    list-style: none;
+    li {
+      line-height: 2.5;
+      color: #b6b8b8;
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+}

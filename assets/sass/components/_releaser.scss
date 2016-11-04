@@ -1,0 +1,20 @@
+.releaser {
+  width: 100%;
+  position: absolute;
+  background: rgba(24, 38, 48, .9);
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  z-index: 15;
+  .divider {
+    border-bottom: 1px solid #ddd;
+  }
+  .panel-default {
+    background: #fff;
+    .panel-heading {
+      background: #fff;
+      color: rgb(150, 153, 152);
+    }
+  }
+}

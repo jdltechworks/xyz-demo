@@ -1,0 +1,189 @@
+//---------------------------------------------------------//
+// Navigation
+//---------------------------------------------------------// 
+// - All Menus
+//---------------------------------------------------------//
+
+
+.navbar-default {
+	color: $navbar-default-color;
+	background-color: $navbar-default-bg;
+	height: rem($navbar-height);
+	@include breakpoint(xs-only) {
+		height: auto;
+	}
+	@include box-shadow();
+	padding: rem(0 $grid-gutter-width);
+	.valign {
+		height: rem($navbar-height);
+		padding-right: 1.5em;
+	}
+}
+
+.navbar {
+	margin-bottom: 0px;
+	.btn-filter {
+		margin-left: rem(5);
+		margin-right: rem(5);
+		&:last-child {
+			margin-right: 0;
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	@include breakpoint(xs-only) {
+		.btn-filter {
+			font-size: rem(10);
+			margin: 0;
+			padding-left: rem(9);
+			padding-right: rem(9);
+		}
+		.icon-check-white {
+			@include background-retina(10, 8);
+		}
+		.icon-remove-2 {
+			@include background-retina(9, 9);
+		}
+	}
+}
+
+.navbar-left {
+	float: left;
+}
+.navbar-right {
+	float: right;
+	@include breakpoint(xs-only) {
+		width: 100%;
+    padding-bottom: 1em;
+	}
+}
+
+.navbar-item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0;
+	&:last-child {
+		margin-right: 0;
+	}
+	@include breakpoint(sm) {
+		margin-right: 0;
+	}
+}
+
+.navbar-brand {
+	background: url(../images/cp-logo.png) 0 0 no-repeat;
+	@include background-retina(164, 24);
+	float: left;
+	margin-top: rem(21);
+	display: none;
+}
+
+.logged-in {
+	.navbar-brand {
+		display: none;
+	}
+}
+
+.navbar-path {
+	float: left;
+	margin-top: rem(14);
+	font-size: 23px;
+	@include breakpoint(xs-only) {
+		font-size: 15px;
+		line-height: 2.5;
+	}
+}
+
+.logged-out {
+	.back-btn {
+		background: none;
+	}
+	.navbar-brand {
+		display: block;
+	}
+}
+
+.menu-open {
+	.navbar-path {
+		display: none;
+	}
+	.navbar-brand {
+		display: block;
+	}
+}
+
+.navbar-title {
+	color: #323433;
+	font-weight: 500;
+}
+
+
+.navbar-search {
+	float: right;
+	.form-control {
+		width: auto;
+		padding-right: 4em;
+		float: left;
+		margin-top: rem(5);
+		position: relative;
+		z-index: 5;
+		background: none;
+	}
+	.search-btn {
+		background: none;
+		padding: 0;
+		margin: 0;
+		float: left;
+		background: url(../images/icons/icon-search.png) 50% 50% no-repeat;
+		background-size: rem(17 17);
+		width: rem(37);
+		height: rem(37);
+		opacity: 0.7;
+		cursor: pointer;
+		border: none;
+		padding: rem(10);
+		margin-top: rem(0);
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		z-index: 1;
+		transform: translateY(-50%);
+	}
+	@include breakpoint(sm) {
+		.form-control {
+			width: rem(160);
+		}
+	}
+}
+
+
+
+// Steps
+
+.steps {
+	@extend .nav;
+	font-size: 0;
+	line-height: 1;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: rem(16);
+		margin-right: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	a {
+		color: rgba(#7d8381, 0.4);
+	}
+	li.active a {
+		color: rgba(#7d8381, 1);
+	}
+	@include breakpoint(sm) {
+		li {
+			font-size: rem(25);
+			margin-right: 0;
+		}
+	}
+}

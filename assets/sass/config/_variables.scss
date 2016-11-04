@@ -1,0 +1,142 @@
+// Variables
+//---------------------------------------------------------//
+// - Custom Variables
+// - Override Boostrap Variables
+//---------------------------------------------------------//
+
+@import 'base/mixins';
+
+
+// Custom Variables
+//---------------------------------------------------------//
+
+$browser-context: 						16;
+$easing: 								ease-in-out;
+$global-margin-bottom: 					20px;
+$menu-panel-width:						210px;					
+$border-color: 							#d9d9d9;
+
+
+$btn-border-radius: 					15px;
+
+// Menu Toggle
+$menu-toggle-bg: 						#afb3b2;
+
+
+
+
+
+
+
+
+
+
+
+// Bootstrap Variables
+//---------------------------------------------------------//
+
+
+// Colors
+$brand-primary:         #a2b9af; 
+$brand-secondary:		#b5d8c9;
+$brand-success:         #b5d8c9;
+$brand-info:            #34495e;
+$brand-warning:         #feeac4;
+$brand-danger:          #d9534f;
+
+$gray-dark:				#484c4b;
+$gray-light:            #afb3b2;
+
+
+// Scaffolding
+$text-color: 			#969998;
+
+
+// Typography
+$font-family-sans-serif:			"gt_walsheim", Helvetica, Arial, sans-serif;
+$font-size-base:          			14px;
+$headings-line-height:    			1.25;
+
+$text-muted:                  $gray-light;
+
+
+$link-color:            inherit;
+$link-hover-color:      inherit;
+
+$font-size-h1:            rem(24); 
+$font-size-h2:            rem(20); // ~30px
+$font-size-h3:            rem(16); // ~24px
+$font-size-h4:            rem(12); // ~18px
+$font-size-h5:            rem(11);
+$font-size-h6:            rem(10); // ~12px
+
+
+$headings-color: 			#393939;
+
+
+// Components
+$border-radius-base:        		0px;
+$border-radius-large:       		0px;
+$border-radius-small:       		0px;
+
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  12px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+
+$caret-width-base:          4px;
+
+
+// Navbar
+$navbar-height:                    	65px;
+$navbar-default-color:             	#a2a6a4;
+$navbar-default-bg:                	#ffffff;
+
+
+
+// Forms
+$input-bg:                       #fff;
+$input-border:                   transparent;
+$input-border-radius:            0;
+$input-color:                    #323a45;
+$input-border-focus:             $brand-primary;
+$input-color-placeholder:        #bcbcbc;
+$form-group-margin-bottom:       15px;
+
+$input-border:                   transparent;
+
+
+// Buttons
+$btn-primary-color:              #ffffff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
+
+
+$btn-success-color:              #364b60;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $brand-success;
+
+$btn-warning-color:              #52616d;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $brand-warning;
+
+
+
+// Panels
+$panel-bg:                    #fff;
+$panel-body-padding:          20px 20px;
+$panel-default-bg:			  #efede9;
+
+// Grid
+$grid-gutter-width:         		20px;
+
+
+

@@ -1,0 +1,70 @@
+//---------------------------------------------------------//
+// LAYOUT
+//---------------------------------------------------------// 
+// - base structure layouts 
+// - override bootstrap layouts
+//---------------------------------------------------------//
+
+
+// Wrapper
+//---------------------------------------------------------//
+
+.wrapper {
+	transition: transform 0.25s $easing;
+	padding-top: rem($navbar-height);
+}
+
+.container {
+	width: auto !important;
+	padding: rem(0 $grid-gutter-width);
+	margin-top: 0px !important;
+}
+
+
+// Header
+//---------------------------------------------------------//
+
+.header {
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+	z-index: 999999;
+}
+
+
+
+
+// Main
+//---------------------------------------------------------//
+
+.main {
+	padding-bottom: 5%;
+	min-height: 40em;
+	position: relative;
+}
+
+.main-content {
+	padding: rem(20 0);
+}
+
+.main-inner {
+	background-color: #efede9;
+}
+
+.main-top {
+	background: url(../images/concrete-bg.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	text-align: center;
+	h1, h2, h3, h4, h5, h6, p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	h2 {
+		font-size: rem(32);
+	}
+	.valign {
+		height: rem(150);
+	}
+}

@@ -1,0 +1,167 @@
+//---------------------------------------------------------//
+// TOOLS
+//---------------------------------------------------------// 
+
+.tools-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	overflow-x: hidden;
+	.tool-btns {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+		cursor: pointer;
+		z-index: 11;
+	}
+	.tool-btn {
+		width: rem(26);
+		height: rem(26);
+		display: block;
+		line-height: rem(26);
+		text-align: center;
+		background-color: #c7cac9;
+		float: left;
+		position: relative;
+		z-index: 10;
+		border-left: none;
+		transition: opacity 0.25s $easing;
+		&.lock-btn, &.location-btn {
+			background-color: #efd8c5;
+		}
+		&.check-btn {
+			background-color: $brand-success;
+		}
+		&.favorites-btn {
+			background-color: $brand-warning;
+		}
+		&.active {
+			display: block;
+		}
+	}
+	.select-form {
+		select {
+		    background-color: #efeeea;
+		    padding: rem(7 10 7 10);
+		}
+	}
+}
+
+.tool-tap {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	font-size: rem(11);
+	color: $brand-info;
+	font-weight: 500;
+	padding: rem(6 27 2 8);
+	@extend .nav;
+	transform: translateX(100%);
+	transition: transform 0.25s $easing;
+	.icon {
+		margin-right: rem(5);
+	}
+	li {
+		float: left;
+		width: 50%;
+		margin-bottom: rem(3);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+// Lock / Add Btn
+
+.lock-add-btn.active, .checkout-location-btn.active, .favorites-location-btn.active {
+	position: relative;
+	.tool-tap {
+		background-color: #efd8c5;
+		transform: none;
+		a {
+			color: $brand-info;
+		}
+	}
+	.btn-to-hide {
+		opacity: 1;
+		z-index: 12;
+		visibility: visible;
+	}
+}
+
+
+.favorites-location-btn.active {
+	.tool-tap {
+		background-color: $brand-warning;
+	}
+}
+
+
+.tool-panel {
+	height: 100%;
+	&.active {
+		.tool-panel-content {
+			transform: none;
+		}
+	}
+}
+
+.tool-panel-content {
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: rem(25 25 25 25);
+	transition: transform 0.4s $easing;
+	transform: translateY(-100%);
+	z-index: 9;
+	display: table;
+	.content-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	h4 {
+		color: #424242;
+	}
+
+}
+
+
+.project-set {
+	.wrap {
+		position: relative;
+		overflow: hidden;
+	}
+	.checkout-location-btn {
+		position: absolute;
+		right: 0;
+		z-index: 100;
+		background-color: #b5d8c9;
+		.tool-btns {
+			span {
+				padding: 5px 10px;
+				display: inline-table;
+				cursor: pointer;
+			}
+		}
+		&.active + .tool-tap {
+			transition: transform 0.4s $easing;
+			transform: translateX(0);
+		}
+	}
+	.tool-tap {
+    background: #b5d8c9;
+    padding: 6px 10px;
+    position: absolute;
+    z-index: 99;
+    left: 1px;
+    width: 100%;
+	}
+}

@@ -1,0 +1,26 @@
+//---------------------------------------------------------//
+// LAYOUT
+//---------------------------------------------------------// 
+// - base structure layouts 
+// - override bootstrap layouts
+//---------------------------------------------------------//
+
+* {
+	outline: none;
+}
+
+html, body {
+	position: relative;
+}
+
+html {
+	font-size: 100%;
+	overflow-x: visible;
+}
+
+body {
+	font-size: rem($font-size-base);
+	background: url(../images/marble-bg.jpg) 0 0 no-repeat fixed;
+	background-size: cover;
+	overflow-x: hidden;
+}

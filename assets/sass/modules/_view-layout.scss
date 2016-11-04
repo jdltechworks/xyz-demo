@@ -1,0 +1,22 @@
+//---------------------------------------------------------//
+// View Layout - Grid / Moodboard
+//---------------------------------------------------------// 
+
+.moodboard-layout {
+	.row {
+		margin-left: rem(-3);
+		margin-right: rem(-3);
+	}
+	[class^="col-"] {
+		padding-left: rem(3);
+		padding-right: rem(3);
+	}
+	.thumbnail {
+		margin-bottom: rem(6);
+		.thumbnail-image {
+			margin-bottom: 0;
+		}
+	}
+}
+
+

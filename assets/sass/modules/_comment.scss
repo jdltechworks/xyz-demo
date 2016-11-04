@@ -1,0 +1,35 @@
+//---------------------------------------------------------//
+// Comment Form
+//---------------------------------------------------------// 
+
+.comment-form {
+	display: block;
+	margin-bottom: rem(30);
+	background: #eeede9;
+}
+
+.comment-content-block {
+	border-top: 1px solid $border-color;
+	padding: rem(20 20 20 0);
+	position: relative;
+
+	h4, p {
+		margin-bottom: rem(10);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.remove-item {
+		padding: rem(10);
+		width: rem(36);
+		height: rem(36);
+		background: none;
+		.icon {
+			@include background-retina(8, 8);
+		}
+	}
+}
+
+
+
+

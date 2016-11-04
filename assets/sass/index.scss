@@ -1,0 +1,98 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "~font-awesome/fonts";
+// Variables
+//---------------------------------------------------------//
+@import 'config/variables';
+@import '~font-awesome/scss/font-awesome';
+
+// Vendor
+//---------------------------------------------------------//
+
+// Bootstrap (Include necessary components only for css file size)
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/normalize';   
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/grid';    
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';   
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/forms";   
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";   
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/type";    
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/component-animations';    
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';    
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/alerts';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons';
+@import '~slick-carousel/slick/slick.scss';
+
+// Swiper
+@import 'vendor/swiper';
+@import 'vendor/pickaday';
+
+//@import 'vendor/jquery-ui.min.scss';
+
+
+
+
+// Base
+//---------------------------------------------------------//
+
+@import 'base/helpers';
+@import 'base/mixins';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/layout';
+
+
+
+
+// Components
+//---------------------------------------------------------//
+
+@import 'components/icons';
+@import 'components/buttons';
+@import 'components/badges';
+@import 'components/navbar';
+@import 'components/nav';
+@import 'components/forms';
+@import 'components/menu-panel';
+@import 'components/panels';
+@import 'components/tools';
+@import 'components/tags';
+@import 'components/thumbnails';
+@import 'components/tables';
+@import 'components/overlay';
+@import 'components/flash-message';
+@import 'components/loader';
+@import 'components/searchoverlay';
+@import 'components/mailer';
+@import 'components/releaser';
+@import 'components/project-status-controller';
+
+
+// Modules
+//---------------------------------------------------------//
+
+@import 'modules/animation';
+@import 'modules/slider';
+@import 'modules/dropdown';
+@import 'modules/login';
+@import 'modules/inventory-dashboard';
+@import 'modules/filter';
+@import 'modules/sorting';
+@import 'modules/tabs';
+@import 'modules/item-details';
+@import 'modules/info-panel';
+@import 'modules/comment';
+@import 'modules/project-listing';
+@import 'modules/view-layout';
+@import 'modules/admin';
+@import 'modules/accordion';
+@import 'modules/notes';
+@import 'modules/progress';
+
+// Theme Overrides (Custom Styles)
+@import 'custom/form-elements';
+@import 'custom/custom';
+@import 'custom/responsive';
