@@ -37,6 +37,7 @@
     "file": "^0.2.2",
     "file-loader": "^0.9.0",
     "firebase": "^3.5.0",
+    "font-awesome": "^4.7.0",
     "html-webpack-plugin": "^2.22.0",
     "idb": "^1.1.4",
     "jquery": "^2.2.4",
